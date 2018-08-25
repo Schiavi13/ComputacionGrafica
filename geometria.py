@@ -1,6 +1,7 @@
 import math
 from matrices import*
 
+#Recibe una lista de 3 puntos [x,y] y retorna el perimetro del triangulo formado por lo puntos de la lista
 def perimetroTriangulo(puntos):
     perimetro = 0
     resultante = vectorResultante(puntos[0],puntos[1])
