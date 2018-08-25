@@ -1,6 +1,6 @@
 """
 PARCIAL 1 Computacion Grafica Grupo 1
-Universidad Tecnológica de Pereira
+Universidad Tecnologica de Pereira
 2018-I
 PUNTO A
 NUMERAL 1:
