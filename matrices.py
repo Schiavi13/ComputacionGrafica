@@ -1,6 +1,7 @@
-#Librería para operaciones con matrices
+
 #suma = [x[:] for x in matriz1]
 #Retorna la columna n de la matriz
+import math
 def columna(matriz,n):  
     if (n>=0):
         lista =[]
@@ -67,3 +68,25 @@ def sumarMatrices(matriz1,matriz2):
         return suma
     else:
         return "Ambas matrices deben tener el mismo numero de filas"
+
+#Retorna la norma de un vector unidimensional
+def normaVector(vector):
+    sum = 0
+    for i in range(0,len(vector)):
+        sum = sum + math.pow(vector[i],2)
+    return math.sqrt(sum)
+
+#Retorna verdadero si los vectores dados tienen la misma dimension
+def igualdadDimensionVector(vector1,vector2):
+    if len(vector1) == len(vector2):
+        return True
+    else:
+        return False
+
+#Retorna el vector resultante entre dos vectores
+def vectorResultante(vector1,vector2):
+    resultante = []
+    if igualdadDimensionVector(vector1,vector2):
+        for i in range(0,len(vector1)):
+            resultante.append(vector2[i]-vector1[i])
+        return resultante
