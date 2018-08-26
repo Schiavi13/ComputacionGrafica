@@ -90,3 +90,29 @@ def vectorResultante(vector1,vector2):
         for i in range(0,len(vector1)):
             resultante.append(vector2[i]-vector1[i])
         return resultante
+
+#Recibe dos vectores [x,y,...,n] y retorna el producto punto entre ambos
+def productoPuntoVectores(vector1,vector2):
+    if len(vector1) == len(vector2):
+        sum = 0
+        for i in range(0,len(vector1)):
+            sum = sum + vector1[i]*vector2[i]
+        return sum
+        
+
+#Recibe una lista de 3 puntos [x,y] y retorna el perimetro del triangulo formado por la union de los puntos
+def perimetroTriangulo(puntos):
+    perimetro = 0
+    resultante = vectorResultante(puntos[0],puntos[1])
+    perimetro = perimetro + normaVector(resultante)
+    resultante = vectorResultante(puntos[1],puntos[2])
+    perimetro = perimetro + normaVector(resultante)
+    resultante = vectorResultante(puntos[2],puntos[0])
+    perimetro = perimetro + normaVector(resultante)
+    return perimetro
+
+#Recibe dos listas [x,y,...,n] de igual dimension y retorna el angulo formado por los vectores que representan
+def anguloVectores(vector1,vector2):
+    if len(vector1) == len(vector2):
+        return math.degrees(math.acos((productoPuntoVectores(vector1,vector2)/(normaVector(vector1)*normaVector(vector2)))))
+
