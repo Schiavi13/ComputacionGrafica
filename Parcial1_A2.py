@@ -12,7 +12,6 @@ from pygame.locals import*
 from transformaciones_lineales import* 
 from Dibujos import dibujarTriangulo
 from matrices import*
-from geometria import*
 
 ANCHO = 600
 ALTO = 480
