@@ -23,14 +23,14 @@ def dibujarPlano(pantalla):
     pygame.draw.line(pantalla,VERDE,[0,ALTO/2],[ANCHO,ALTO/2])
     pygame.draw.line(pantalla,VERDE,[ANCHO/2,0],[ANCHO/2,ALTO])
 
-#Rota un punto un ángulo theta dado en sentido horario
+#Rota un punto un angulo theta dado en sentido horario
 def rotarPuntoCW(punto,theta):
     theta = math.radians(theta)
     x = int(round((math.cos(theta)*punto[0])-(math.sin(theta)*punto[1])))
     y = int(round((math.sin(theta)*punto[0])+(math.cos(theta)*punto[1])))
     return [x,y]
 
-#Rota un punto un ángulo dado en sentido antihorario
+#Rota un punto un angulo dado en sentido antihorario
 def rotarPuntoACW(punto,theta):
     theta = math.radians(theta)
     x = int(round((math.cos(theta)*punto[0])+(math.sin(theta)*punto[1])))
