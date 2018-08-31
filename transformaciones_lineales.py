@@ -37,13 +37,13 @@ def rotarPuntoACW(punto,theta):
     y = int(round((math.sin(theta)*(-punto[0]))+(math.cos(theta)*punto[1])))
     return [x,y]
 
-#Calcula el punto en el plano cartesiano al que correspone una posición de pantalla
+#Calcula el punto en el plano cartesiano al que correspone una posicion de pantalla
 def calcularPuntoPlano(punto,origen):
     x = punto[0]-origen[0]
     y = origen[1]-punto[1]
     return [x,y]
 
-#Calcula el punto en la pantalla al que corresponde una posición en el plano cartesiano
+#Calcula el punto en la pantalla al que corresponde una posicion en el plano cartesiano
 def calcularPuntoPantalla(punto,origen):
     x = punto[0] + origen[0]
     y = origen[1] - punto[1]
