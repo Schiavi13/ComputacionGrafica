@@ -19,7 +19,7 @@ def escalarPunto(punto,proporcion):
     return [x,y]
 
 #Dibuja un plano cartesiano con origen en el medio de la pantalla
-def dibujarPlano(pantalla):
+def dibujarPlano(pantalla,ANCHO,ALTO):
     pygame.draw.line(pantalla,VERDE,[0,ALTO/2],[ANCHO,ALTO/2])
     pygame.draw.line(pantalla,VERDE,[ANCHO/2,0],[ANCHO/2,ALTO])
 
