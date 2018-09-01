@@ -21,8 +21,7 @@ if __name__ == "__main__":
             if event.type == pygame.MOUSEBUTTONDOWN:
                 if cont < 3:
                     Triangulo.append(list(pygame.mouse.get_pos()))
-                cont+=1
-                
+                cont+=1         
             if event.type == pygame.KEYDOWN:
                 if event.key == pygame.K_SPACE:
                     if cont >=3:
@@ -30,7 +29,6 @@ if __name__ == "__main__":
                             Triangulo[i] = calcularPuntoPlano(Triangulo[i],origen)
                             Triangulo[i] = escalarPunto(Triangulo[i],2)
                             Triangulo[i] = calcularPuntoPantalla(Triangulo[i],origen)
-                        print Triangulo
         if cont>=3:
             pantalla.fill(NEGRO)
             dibujarPlano(pantalla,ANCHO,ALTO)
