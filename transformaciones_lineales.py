@@ -49,16 +49,14 @@ def calcularPuntoPantalla(punto,origen):
     y = origen[1] - punto[1]
     return [x,y]
 
-#Pasa de cartesianas a polares
-def Conversion_polares(p):
-    r=math.sqrt((p[0]**2)+(p[1]**2))
-    o=math.degrees(math.acos(p[0]/r))
-    p=[r,o]
-    return p
+#Pasa de coordenadas cartesianas a coordenadas polares
+def cartPolares(punto):
+    r = math.sqrt((punto[0]**2)+(punto[1]**2))
+    theta = math.degrees(math.acos(p[0]/r))
+    return [r,theta]
 
-#Pasa de polares a cartesianas
-def Conversion_cartesianas(r,o):
-    x=r*math.cos(o)
-    y=r*math.sin(o)
-    p=[x,y]
-    return p
+#Pasa de coordenadas polares a coordenadas cartesianas
+def polaresCart(r,theta):
+    x = int(r*(math.cos(math.radians(theta))))
+    y = int(r*(math.sin(math.radians(theta))))
+    return [x,y]
